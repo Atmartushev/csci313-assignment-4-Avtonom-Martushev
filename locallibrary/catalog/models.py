@@ -58,7 +58,6 @@ class Book(models.Model):
         return ', '.join(genre.name for genre in self.genre.all()[:3])
 
     display_genre.short_description = 'Genre'
-    
     def __str__(self):
         """String for representing the Model object."""
         return self.title
