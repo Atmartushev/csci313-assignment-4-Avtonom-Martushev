@@ -3,3 +3,12 @@
   padding: 0;
   list-style: none;
 }
+
+#logout-form {
+  display: inline;
+}
+
+.logout-button {
+  padding: 0;
+  border: none;
+}
