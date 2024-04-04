@@ -1,0 +1,26 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<div class="modern-welcome">
+  <h1 class="welcome-heading">Welcome to LocalLibrary</h1>
+  <p class="welcome-text">
+    Discover a world of knowledge and adventure with our collection. Curated by
+    <em class="mozilla">Mozilla Developer Network</em>.
+  </p>
+  <div class="dynamic-content">
+    <h2>Library Insights</h2>
+    <p>Explore our vast collection:</p>
+    <ul class="records-list">
+      <li><strong>Books:</strong> {{ num_books }}</li>
+      <li><strong>Copies:</strong> {{ num_instances }}</li>
+      <li><strong>Available Copies:</strong> {{ num_instances_available }}</li>
+      <li><strong>Authors:</strong> {{ num_authors }}</li>
+    </ul>
+
+    <p class="visit-counter">
+      You have explored this page {{ num_visits }} time{{ num_visits|pluralize }}.
+    </p>
+  </div>
+</div>
+
+{% endblock %}

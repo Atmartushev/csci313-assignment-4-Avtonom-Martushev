@@ -1,0 +1,14 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<form action="" method="post">
+    {% csrf_token %}
+    <h1>Create Book Instance</h1>
+    <table>
+        {{ form.as_table }}
+    </table>
+    <input type="submit" value="Submit">
+
+</form>
+{% endblock %}

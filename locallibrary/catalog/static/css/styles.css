@@ -1,0 +1,326 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #121212; /* Dark background */
+  color: #ffffff; /* Light text color for contrast */
+  font-family: "Roboto", sans-serif; /* Modern, clean font */
+}
+
+a,
+.btn-link {
+  color: #00ffea; /* Neon accent color */
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover,
+.btn-link:hover {
+  color: #ff1177; /* Change color on hover for interactive feel */
+}
+
+/* Sidebar styles */
+.sidebar-nav {
+  list-style-type: none;
+  padding: 20px;
+}
+
+.sidebar-nav li {
+  padding: 10px 0;
+}
+
+.dropdown-menu {
+  background-color: #222; /* Slightly lighter dark shade for dropdown background */
+  border: none;
+}
+
+.dropdown-item {
+  color: #ccc; /* Light grey color for dropdown items */
+}
+
+.dropdown-item:hover {
+  background-color: #333; /* Dark hover state */
+  color: #00ffea; /* Neon accent color on hover */
+}
+
+/* Card styles */
+.card {
+  background-color: #1e1e1e; /* Dark card background */
+  border: 1px solid #333; /* Subtle border to define edges */
+  transition: transform 0.2s ease-in-out; /* Smooth animation for hover effect */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Lift card on hover */
+  border-color: #00ffea; /* Change border color to neon accent */
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card-title,
+.card-text {
+  color: #ccc; /* Light grey text color */
+}
+
+.btn-primary {
+  background-color: #00ffea; /* Neon accent background */
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #ff1177; /* Change to a different neon color on hover */
+}
+
+/* Pagination styles for a futuristic touch */
+.pagination .page-links {
+  color: #ccc;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+}
+
+.page-links a {
+  color: #00ffea; /* Neon color for page links */
+  text-decoration: none;
+}
+
+.page-current {
+  color: #ccc; /* Light grey for current page indicator */
+}
+
+/* Style for the sidebar navigation "cards" */
+.sidebar-nav .staff-card {
+  list-style-type: none; /* Removes default list styling */
+  margin-bottom: 10px; /* Spacing between items */
+  background: linear-gradient(
+    145deg,
+    #232323,
+    #191919
+  ); /* Futuristic gradient */
+  border: 1px solid #2e2e2e; /* Subtle border for depth */
+  border-radius: 5px; /* Rounded corners */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transitions for hover effects */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.sidebar-nav .staff-card a {
+  display: block; /* Makes the whole area clickable */
+  padding: 10px 15px; /* Spacing inside the card */
+  color: #00ffea; /* Neon accent color */
+  text-decoration: none; /* Removes underline from links */
+}
+
+.sidebar-nav .staff-card:hover {
+  transform: translateY(-3px); /* Lifts card on hover */
+  box-shadow: 0 6px 8px rgba(0, 255, 234, 0.2); /* Larger shadow with accent color */
+  background: linear-gradient(
+    145deg,
+    #2b2b2b,
+    #202020
+  ); /* Lighter gradient on hover */
+}
+
+.large-text {
+  font-size: 1.5em; /* Adjust as needed */
+}
+
+form input,
+form select,
+form textarea {
+  /* Basic styling */
+  border: 1px solid #ced4da; /* Subtle border */
+  border-radius: 0.25rem; /* Rounded corners for a softer look */
+  padding: 0.5rem 0.75rem; /* Adequate padding for easier interaction */
+  width: 100%; /* Full width to align with modern design practices */
+  box-sizing: border-box; /* Ensures padding does not affect overall width */
+  margin-bottom: 1rem; /* Spacing between form elements */
+
+  /* Typography */
+  font-size: 1rem; /* Adequate font size for readability */
+  color: #495057; /* Dark gray for text for better readability */
+
+  /* Interaction */
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; /* Smooth transition for interactions */
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  border-color: #80bdff; /* Highlight color for focused elements */
+  outline: 0; /* Removes the default focus outline */
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Subtle shadow to emphasize focus */
+}
+
+/* Placeholder styling for further customization */
+form input::placeholder,
+form select::placeholder,
+form textarea::placeholder {
+  color: #6c757d; /* Lighter text for placeholders */
+  opacity: 1; /* Full opacity for clarity */
+}
+
+/* Improving the look of disabled form fields */
+form input:disabled,
+form select:disabled,
+form textarea:disabled {
+  background-color: #e9ecef; /* Light background to indicate disabled state */
+  opacity: 1; /* Keeps text clearly legible even when disabled */
+}
+
+form input[type="submit"] {
+  padding: 0.25rem 0.5rem; /* Reduced padding */
+  font-size: 0.875rem; /* Smaller font size */
+  border-radius: 0.2rem; /* Adjusted border-radius for smaller size */
+  width: auto; /* Adjust width as necessary, 'auto' for content width or specific px/em/rem value */
+  cursor: pointer; /* Change cursor to pointer to indicate clickable */
+  transition: background-color 0.2s, transform 0.2s; /* Smooth transition for visual feedback */
+}
+
+form input[type="submit"]:hover {
+  background-color: #0056b3; /* Darker shade on hover for visual feedback */
+  transform: scale(0.98); /* Slight shrink effect on hover */
+}
+
+.modern-welcome {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.welcome-heading {
+  color: #0056b3; /* Modern blue */
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.welcome-text {
+  color: #333; /* Dark grey for text */
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.mozilla {
+  color: #ff9400; /* Mozilla orange */
+  font-style: normal;
+}
+
+.dynamic-content {
+  background-color: #000000; /* Light background for the section */
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.records-list {
+  list-style-type: none; /* Removes default list style */
+  padding: 0;
+  text-align: left;
+  display: inline-block;
+  margin: 0 auto; /* Center align the list */
+}
+
+.records-list li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.visit-counter {
+  font-style: italic;
+  margin-top: 20px;
+  color: #666; /* Lighter grey for subtle emphasis */
+}
+
+@media (min-width: 768px) {
+  .modern-welcome {
+    text-align: left;
+  }
+
+  .records-list {
+    text-align: center;
+  }
+}
+
+.site-footer {
+  background-color: #2c3e50;
+  color: #ffffff;
+  padding: 40px 0;
+  font-size: 0.9rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-column {
+  width: 33%;
+}
+
+.footer-column h3 {
+  margin-top: 0;
+  color: #f39c12;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer-column ul li a {
+  color: #bdc3c7;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #f39c12;
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-links img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s;
+}
+
+.social-links img:hover {
+  transform: scale(1.1);
+}
+
+.footer-bottom-row {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #34495e;
+  padding-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .footer-column {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
