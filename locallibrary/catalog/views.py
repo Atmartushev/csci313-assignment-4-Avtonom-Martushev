@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from .models import Author
@@ -11,6 +11,7 @@ from django.urls import reverse
 import datetime
 from django.contrib.auth.decorators import login_required, permission_required
 from catalog.forms import RenewBookForm
+from django.contrib.auth import logout
 
 def index(request):
     """View function for home page of site."""
@@ -249,3 +250,10 @@ class BookInstanceDelete(PermissionRequiredMixin, DeleteView):
     model = BookInstance
     success_url = reverse_lazy('bookinstances')
     permission_required = 'catalog.delete_bookinstance'
+
+def logged_out_view(request):
+    return render(request, '../templates/registration/logged_out.html')
+
+def logout_view(request):
+    logout(request)
+    return redirect('logged_out')

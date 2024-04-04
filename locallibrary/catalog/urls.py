@@ -1,7 +1,7 @@
-from django.urls import path
-
+from django.urls import include, path
+from django.contrib.auth import views as auth_views
 from . import views
-
+from .views import logout_view
 
 urlpatterns = [
     path('', views.index, name='index'),
@@ -9,7 +9,7 @@ urlpatterns = [
     path('book/<int:pk>', views.BookDetailView.as_view(), name='book-detail'),
     path('authors/', views.AuthorListView.as_view(), name='authors'),
     path('author/<int:pk>',
-         views.AuthorDetailView.as_view(), name='author-detail'),
+         views.AuthorDetailView.as_view(), name='author-detail'),  
 ]
 
 
@@ -72,4 +72,8 @@ urlpatterns += [
          views.BookInstanceUpdate.as_view(), name='bookinstance-update'),
     path('bookinstance/<uuid:pk>/delete/',
          views.BookInstanceDelete.as_view(), name='bookinstance-delete'),
+]
+
+urlpatterns += [
+    path('accounts/', include('django.contrib.auth.urls')),
 ]
