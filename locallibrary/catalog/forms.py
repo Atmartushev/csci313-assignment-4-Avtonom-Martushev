@@ -5,6 +5,8 @@ from django import forms
 from django.core.exceptions import ValidationError
 from django.utils.translation import gettext_lazy as _
 
+from .models import Book
+
 class RenewBookForm(forms.Form):
     renewal_date = forms.DateField(help_text="Enter a date between now and 4 weeks (default 3).")
 
@@ -21,3 +23,13 @@ class RenewBookForm(forms.Form):
 
         # Remember to always return the cleaned data.
         return data
+
+class BookForm(forms.ModelForm):
+    class Meta:
+        model = Book
+        fields = ['title', 'author', 'summary', 'isbn', 'genre', 'language']
+        widgets = {
+            'title': forms.TextInput(attrs={'class': 'my-custom-class'}),
+            'author': forms.Select(attrs={'class': 'my-custom-class'}),
+            # Add your other fields here
+        }
